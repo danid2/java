@@ -1,0 +1,126 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox fx:controller="application.Controller" xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="rootLayout" alignment="CENTER" spacing="10" prefWidth="600"
+      prefHeight="460" minWidth="600" minHeight="460">
+
+    <!--
+<GridPane fx:controller="application.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+</GridPane>
+    -->
+
+    <!-- Set padding values -->
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+    </padding>
+
+    <Label fx:id="dockerLabel" minWidth="50" minHeight="20" alignment="TOP_CENTER"
+           prefWidth="500" prefHeight="200" />
+
+
+    <!-- host panel -->
+    <HBox fx:id="hostHbox" alignment="CENTER" spacing="5">
+        <!-- Label to show the connection status -->
+        <Label fx:id="hostLabel" minWidth="50" minHeight="17"
+               prefWidth="100" prefHeight="20" />
+
+        <TextField fx:id="host" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+    </HBox>
+
+    <!-- port panel -->
+    <HBox fx:id="portHbox" alignment="CENTER" spacing="5">
+
+        <!-- Label to show the connection status -->
+        <Label fx:id="portLabel" minWidth="50" minHeight="20"
+               prefWidth="100" prefHeight="20" />
+
+        <TextField fx:id="port" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+
+    </HBox>
+
+    <HBox fx:id="connectHbox" alignment="CENTER" spacing="5">
+
+        <!-- Connect button -->
+        <Button fx:id="connectButton" text="Connect" prefWidth="100" prefHeight="60" onAction="#connectEventHandler" />
+        <!-- Connect button -->
+        <Button fx:id="connect2Button" text="CONNECT++" prefWidth="100" prefHeight="60" onAction="#connect2EventHandler" />
+
+        <TextField fx:id="loopNumber" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="100" prefHeight="20" />
+
+    </HBox>
+
+
+    <!-- serverIP panel -->
+    <HBox fx:id="serverIPHbox" alignment="CENTER" spacing="5">
+
+        <!-- Label to show the connection status -->
+        <Label fx:id="serverIPLabel" minWidth="50" minHeight="20"
+               prefWidth="110" prefHeight="20" />
+
+        <TextField fx:id="serverIP" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+
+    </HBox>
+
+    <!-- serverName panel -->
+    <HBox fx:id="serverNameHbox" alignment="CENTER" spacing="5">
+
+        <!-- Label to show the connection status -->
+        <Label fx:id="serverNameLabel" minWidth="50" minHeight="20"
+               prefWidth="110" prefHeight="20" />
+
+        <TextField fx:id="serverName" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+
+    </HBox>
+
+    <!-- client panel -->
+    <HBox fx:id="clientHbox" alignment="CENTER" spacing="5">
+        <!-- Label to show the connection status -->
+        <Label fx:id="clientLabel" minWidth="50" minHeight="17"
+               prefWidth="110" prefHeight="20" />
+
+        <TextField fx:id="client" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+    </HBox>
+
+    <!-- success panel -->
+    <HBox fx:id="counterHbox" alignment="CENTER" spacing="5">
+        <!-- Label to show the connection status -->
+        <Label fx:id="counterLabel" minWidth="50" minHeight="17"
+               prefWidth="110" prefHeight="20" />
+
+        <TextField fx:id="counter" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+    </HBox>
+
+    <!-- success panel -->
+    <HBox fx:id="failHbox" alignment="CENTER" spacing="5">
+        <!-- Label to show the connection status -->
+        <Label fx:id="failLabel" minWidth="50" minHeight="17"
+               prefWidth="110" prefHeight="20" />
+
+        <TextField fx:id="fail" maxWidth="200" maxHeight="20"
+                   minWidth="50" minHeight="27" prefWidth="200" prefHeight="20" />
+
+    </HBox>
+
+
+</VBox>
